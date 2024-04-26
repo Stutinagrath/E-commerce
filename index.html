@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>SELECT YOUR CHOICE</title>
+</head>
+
+<body>
+    <button id="toggleDarkMode" class="toggle-button">Dark Mode</button>
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        const toggleDarkModeButton = document.getElementById("toggleDarkMode");
+        toggleDarkModeButton.addEventListener("click", toggleDarkMode);
+    </script>
+    <div class="loader"></div>
+    <div class="content" style="display:none;">
+    <div class="title">
+        <h1>SELECT YOUR CHOICE</h1>
+    </div>
+    <div class="filter-bar">
+        <button class="filter-btn" data-category="Men"><i class="fas fa-male"></i>Men</button><button class="filter-btn" data-category="Women"><i class="fas fa-female"></i>Women</button><button class="filter-btn" data-category="Kids"><i class="fas fa-child"></i>Kids</button>
+    </div>
+    <div class="container" id="productContainer">
+        <!-- Product cards will be appended here -->
+        <div class ="all-the-cards">
+          <div class="product">
+            <img src="product-image.jpg" alt="Product Image">
+            <div class="product-details">
+                <div class="product-info">
+                    <h2 class="product-title">Product Title <span class="product-vendor">Vendor Name</span></h2>
+                </div>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
